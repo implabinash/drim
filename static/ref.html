@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DRIM | DevRel Impact Model</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              mono: ['"JetBrains Mono"', 'monospace'],
+            },
+            colors: {
+               black: '#000000',
+               white: '#ffffff',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #ffffff;
+        color: #111111;
+        font-family: 'JetBrains Mono', monospace;
+        line-height: 1.75;
+      }
+      h1, h2, h3 {
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+      p {
+        margin-bottom: 1.75rem;
+      }
+      a {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        transition: all 0.2s;
+        color: #000;
+      }
+      a:hover {
+        background-color: #000;
+        color: #fff;
+        text-decoration: none;
+      }
+      /* Custom Range Slider Styling for 'Native' feel but cleaner */
+      input[type=range] {
+        height: 6px;
+        -webkit-appearance: none;
+        width: 100%;
+        background: transparent;
+      }
+      input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background: #000000;
+        cursor: pointer;
+        margin-top: -6px;
+      }
+      input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 4px;
+        cursor: pointer;
+        background: #e5e7eb;
+        border-radius: 2px;
+      }
+      input[type=text], input[type=number] {
+        border-radius: 0;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="max-w-2xl mx-auto px-6 py-12 text-base sm:text-lg">
+
+    <nav class="flex justify-end gap-6 mb-20 text-sm font-bold">
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://cal.com" target="_blank" rel="noopener noreferrer">Office Hours</a>
+    </nav>
+
+    <header class="mb-20">
+        <h1 class="text-3xl font-bold mb-2">DRIM</h1>
+        <div class="text-sm text-gray-500 font-bold">DevRel Impact Model</div>
+    </header>
+
+    <main>
+        <article>
+            <h2 class="text-xs font-bold uppercase tracking-widest mb-6 text-gray-400">01. The Problem</h2>
+            <p>
+                Developer Relations teams often drown in "opportunity." Every conference, every integration, every blog post feels urgent.
+            </p>
+            <p>
+                But not all work is equal. Without a clear decision-making framework, resources are allocated based on vibes, internal politics, or whoever shouts the loudest. This leads to burnout, lack of focus, and low-impact outcomes.
+            </p>
+
+            <div class="my-12 border-l-2 border-black pl-6 py-1">
+                <p class="mb-0 italic font-bold text-xl leading-tight">
+                    "DevRel is not about vibes. It is about resource allocation."
+                </p>
+            </div>
+
+            <h2 class="text-xs font-bold uppercase tracking-widest mb-6 mt-16 text-gray-400">02. What is DRIM?</h2>
+            <p>
+                DRIM (DevRel Impact Model) is a minimalist framework designed to quantify the qualitative. It provides a consistent method to score potential activities so you can ruthlessly prioritize.
+            </p>
+
+            <div class="bg-gray-50 p-6 border border-gray-200 my-8 font-bold text-sm sm:text-base text-center">
+                Score = (Demand × Reach × Impact) / Maintenance
+            </div>
+
+            <h2 class="text-xs font-bold uppercase tracking-widest mb-6 mt-16 text-gray-400">03. The Simulator</h2>
+            <p class="mb-8">
+                Use the sliders below to calculate the priority score for any given task.
+            </p>
+
+            <!-- Calculator -->
+            <div class="bg-white border border-black p-6 sm:p-8 mb-12 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <form oninput="updateScore()">
+
+                    <!-- New Inputs: Initiative & Hours -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8 pb-8 border-b border-gray-100">
+                        <div>
+                            <label for="initiative-name" class="block font-bold text-sm uppercase tracking-wider mb-2">Initiative Name</label>
+                            <input type="text" id="initiative-name" placeholder="e.g. Q4 Hackathon" class="w-full bg-gray-50 border-b-2 border-gray-200 p-2 font-mono text-sm focus:outline-none focus:border-black focus:bg-white transition-colors">
+                        </div>
+                        <div>
+                            <label for="est-hours" class="block font-bold text-sm uppercase tracking-wider mb-2">Est. Hours</label>
+                            <input type="number" id="est-hours" placeholder="0" class="w-full bg-gray-50 border-b-2 border-gray-200 p-2 font-mono text-sm focus:outline-none focus:border-black focus:bg-white transition-colors">
+                        </div>
+                    </div>
+
+                    <div class="space-y-8">
+                        <!-- Demand -->
+                        <div>
+                            <div class="flex justify-between items-end mb-2">
+                                <label for="demand" class="font-bold text-sm uppercase tracking-wider">Demand</label>
+                                <span id="val-demand" class="font-bold font-mono">5</span>
+                            </div>
+                            <input type="range" id="demand" min="1" max="10" value="5">
+                            <div class="text-xs text-gray-500 mt-2">Volume of community requests or internal friction.</div>
+                        </div>
+
+                        <!-- Reach -->
+                        <div>
+                            <div class="flex justify-between items-end mb-2">
+                                <label for="reach" class="font-bold text-sm uppercase tracking-wider">Reach</label>
+                                <span id="val-reach" class="font-bold font-mono">5</span>
+                            </div>
+                            <input type="range" id="reach" min="1" max="10" value="5">
+                            <div class="text-xs text-gray-500 mt-2">Estimated number of developers affected.</div>
+                        </div>
+
+                        <!-- Impact -->
+                        <div>
+                            <div class="flex justify-between items-end mb-2">
+                                <label for="impact" class="font-bold text-sm uppercase tracking-wider">Impact</label>
+                                <span id="val-impact" class="font-bold font-mono">5</span>
+                            </div>
+                            <input type="range" id="impact" min="1" max="10" value="5">
+                            <div class="text-xs text-gray-500 mt-2">Strategic alignment and business value.</div>
+                        </div>
+
+                        <!-- Maintenance -->
+                        <div>
+                            <div class="flex justify-between items-end mb-2">
+                                <label for="maintenance" class="font-bold text-sm uppercase tracking-wider">Maintenance</label>
+                                <span id="val-maintenance" class="font-bold font-mono">5</span>
+                            </div>
+                            <input type="range" id="maintenance" min="1" max="10" value="5">
+                            <div class="text-xs text-gray-500 mt-2">Ongoing cost to sustain the resource.</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-10 pt-6 border-t border-black flex justify-between items-center">
+                        <div class="text-xs font-bold text-gray-400 uppercase tracking-widest">Final Score</div>
+                        <div id="score" class="text-4xl font-bold">25.0</div>
+                    </div>
+                </form>
+            </div>
+
+            <h2 class="text-xs font-bold uppercase tracking-widest mb-6 mt-16 text-gray-400">04. Guidelines</h2>
+
+            <div class="space-y-6">
+                <!-- Info Message -->
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 text-sm">
+                    <strong class="block text-blue-700 mb-1">Priority Threshold</strong>
+                    <span class="text-blue-900">Scores above 50 indicate immediate priority. These are typically high impact tasks with manageable maintenance costs.</span>
+                </div>
+
+                <!-- Warning Message -->
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-4 text-sm">
+                    <strong class="block text-amber-700 mb-1">The Maintenance Trap</strong>
+                    <span class="text-amber-900">Be cautious of scores between 20-40. These projects often look valuable but can silently drain resources if Maintenance > 6.</span>
+                </div>
+
+                <!-- Error/Critical Message -->
+                <div class="bg-red-50 border-l-4 border-red-500 p-4 text-sm">
+                    <strong class="block text-red-700 mb-1">Deprecation Zone</strong>
+                    <span class="text-red-900">If Impact is low (< 3) and Maintenance is high (> 7), the activity should likely be killed or automated, regardless of the score.</span>
+                </div>
+
+                 <!-- Disclaimer -->
+                 <div class="pt-8 mt-8 border-t border-gray-100 text-xs text-gray-400 italic">
+                    * Disclaimer: The DRIM model is a heuristic tool for decision support. It is not a replacement for strategic human judgment or company mandates.
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="mt-32 pt-8 border-t border-black">
+        <div class="flex flex-col sm:flex-row gap-8 text-sm font-bold">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://cal.com" target="_blank" rel="noopener noreferrer">Office Hours</a>
+        </div>
+    </footer>
+
+
+  </body>
+</html>
