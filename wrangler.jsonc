@@ -1,0 +1,11 @@
+{
+	"name": "drim",
+	"pages_build_output_dir": ".svelte-kit/cloudflare",
+	"compatibility_date": "2025-10-01",
+	"kv_namespaces": [
+		{
+			"binding": "VISITS",
+			"id": "f9161532780e42a791814b332f4a8ae0"
+		}
+	]
+}

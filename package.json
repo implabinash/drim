@@ -7,6 +7,7 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
+		"cf-typegen": "wrangler types --env-interface CloudflareBindings",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -35,6 +36,10 @@
 		"tailwindcss": "^4.1.14",
 		"typescript": "^5.9.3",
 		"typescript-eslint": "^8.46.1",
-		"vite": "^7.1.10"
+		"vite": "^7.1.10",
+		"wrangler": "^4.50.0"
+	},
+	"dependencies": {
+		"@cloudflare/workers-types": "^4.20251121.0"
 	}
 }

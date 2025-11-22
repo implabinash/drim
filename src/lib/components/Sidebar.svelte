@@ -18,9 +18,9 @@
 		<li>
 			<a
 				href={resolve("/")}
-				class="flex items-center gap-3 opacity-60 transition-opacity duration-300 hover:opacity-100"
+				class="flex items-center gap-3 no-underline! opacity-40 transition-opacity duration-300 hover:bg-white! hover:opacity-100"
 			>
-				<span class="text-xs font-semibold tracking-widest text-white">00 Home</span>
+				<span class="text-xs font-semibold tracking-widest text-black">00 Home</span>
 			</a>
 		</li>
 
@@ -28,9 +28,9 @@
 			<li>
 				<a
 					href={`#${navIteam.id}`}
-					class="flex items-center gap-3 opacity-60 transition-opacity duration-300 hover:opacity-100"
+					class="flex items-center gap-3 no-underline! opacity-40 transition-opacity duration-300 hover:bg-white! hover:opacity-100"
 				>
-					<span class="text-xs font-semibold tracking-widest text-white"
+					<span class="text-xs font-semibold tracking-widest text-black"
 						>{navIteam.number} {navIteam.label}</span
 					>
 				</a>
