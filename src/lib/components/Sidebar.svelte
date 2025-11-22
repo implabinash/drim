@@ -7,7 +7,10 @@
 		number: string;
 	};
 
-	const navIteams: NavItem[] = [{ id: "problem", label: "The Problem", number: "01" }];
+	const navIteams: NavItem[] = [
+		{ id: "problem", label: "The Problem", number: "01" },
+		{ id: "origin", label: "Origin Story", number: "02" }
+	];
 </script>
 
 <nav class="fixed top-1/2 left-8 z-50 hidden -translate-y-1/2 xl:block">

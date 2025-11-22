@@ -2,6 +2,7 @@
 	import Footer from "$lib/components/Footer.svelte";
 	import Problem from "$lib/components/Problem.svelte";
 	import Sidebar from "$lib/components/Sidebar.svelte";
+	import Visitor from "$lib/components/Visitor.svelte";
 </script>
 
 <svelte:head>
@@ -27,4 +28,6 @@
 	</main>
 
 	<Footer />
+
+	<Visitor />
 </section>
