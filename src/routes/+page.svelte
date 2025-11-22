@@ -1,14 +1,16 @@
 <script lang="ts">
 	import Footer from "$lib/components/Footer.svelte";
 	import Problem from "$lib/components/Problem.svelte";
+	import Sidebar from "$lib/components/Sidebar.svelte";
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>DRIM: DevRel Impact Model</title>
+	<meta name="description" content="A decision making framework for DevRel resource allocation" />
 </svelte:head>
 
-<section class="mx-auto max-w-2xl px-6 py-20 text-base sm:text-lg">
+<section class="mx-auto max-w-2xl bg-white px-6 py-20 text-base sm:text-lg">
+	<Sidebar />
 	<nav class="mb-20 flex justify-end gap-8 text-sm font-bold">
 		<a href="https://x.com/implabinash" target="_blank">Twitter</a>
 		<a href="https://github.com/implabinash/drim" target="_blank">GitHub</a>

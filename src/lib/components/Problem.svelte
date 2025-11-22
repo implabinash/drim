@@ -1,4 +1,6 @@
-<h2 class="mb-6 text-xs font-bold tracking-widest text-gray-400 uppercase">01. The Problem</h2>
+<h2 id="problem" class="mb-6 text-xs font-bold tracking-widest text-gray-400 uppercase">
+	01. The Problem
+</h2>
 
 <p>
 	Developer Relations teams often drown in "opportunity." Every conference, every integration, every
