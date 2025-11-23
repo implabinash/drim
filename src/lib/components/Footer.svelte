@@ -1,5 +1,5 @@
 <footer
-	class="mt-32 flex flex-col items-start justify-between gap-6 border-t border-black pt-8 sm:flex-row sm:items-center"
+	class="mt-20 flex flex-col items-start justify-between gap-6 border-t border-black pt-8 sm:flex-row sm:items-center"
 >
 	<div class="flex flex-col gap-8 text-sm font-bold sm:flex-row">
 		<a href="https://x.com/implabinash" target="_blank">Twitter</a>

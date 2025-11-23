@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Footer from "$lib/components/Footer.svelte";
+	import Origin from "$lib/components/Origin.svelte";
 	import Problem from "$lib/components/Problem.svelte";
 	import Sidebar from "$lib/components/Sidebar.svelte";
 	import Visitor from "$lib/components/Visitor.svelte";
@@ -23,8 +24,10 @@
 		<div class="text-sm font-bold text-gray-500">DevRel Impact Model</div>
 	</header>
 
-	<main class="mb-20">
+	<main class="mb-20 text-base leading-relaxed">
 		<Problem />
+
+		<Origin />
 	</main>
 
 	<Footer />
