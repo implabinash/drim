@@ -18,9 +18,7 @@ export const POST: RequestHandler = async ({ platform, url }) => {
 		const current = await platform?.env.VISITS.get(KEY);
 		const newCount = (parseInt(current ?? "0") || 0) + 1;
 
-		if (url.origin === "https://drim.pages.dev") {
-			await platform?.env.VISITS.put(KEY, newCount.toString());
-		}
+		await platform?.env.VISITS.put(KEY, newCount.toString());
 
 		return json({ visits: newCount });
 	} catch (error) {

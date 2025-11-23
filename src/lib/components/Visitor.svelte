@@ -20,6 +20,6 @@
 			></span>
 			<span class="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
 		</span>
-		{visits} Visitors
+		{visits.toLocaleString("en-US")} Visitors
 	</div>
 </div>
