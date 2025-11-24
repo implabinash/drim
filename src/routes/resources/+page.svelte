@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Pagenav from "$lib/components/Pagenav.svelte";
 	import Sidebar from "$lib/components/Sidebar.svelte";
 	import Visitor from "$lib/components/Visitor.svelte";
 	import Navbar from "$lib/components/Navbar.svelte";
@@ -20,8 +19,6 @@
 		<section>
 			<p>Working...</p>
 		</section>
-
-		<Pagenav previous="origin" />
 	</main>
 
 	<Footer />

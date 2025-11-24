@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { resolve } from "$app/paths";
+	import { page } from "$app/state";
 
 	type NavItem = {
 		id: string;
@@ -20,7 +21,7 @@
 		<li>
 			<a
 				href={resolve("/")}
-				class="flex items-center gap-3 no-underline! opacity-40 transition-opacity duration-300 hover:bg-white! hover:opacity-100"
+				class={`${page.url.pathname === "/" ? "opacity-100" : "opacity-40"} flex items-center gap-3 no-underline! opacity-40 transition-opacity duration-300 hover:bg-white! hover:opacity-100`}
 			>
 				<span class="text-xs font-semibold tracking-widest text-black">00 Home</span>
 			</a>
@@ -30,7 +31,7 @@
 			<li>
 				<a
 					href={`/${navItem.id}`}
-					class="flex items-center gap-3 no-underline! opacity-40 transition-opacity duration-300 hover:bg-white! hover:opacity-100"
+					class={`${page.url.pathname.includes(navItem.id) ? "opacity-100" : "opacity-40"} flex items-center gap-3 no-underline! transition-opacity duration-300 hover:bg-white! hover:opacity-100`}
 				>
 					<span class="text-xs font-semibold tracking-widest text-black"
 						>{navItem.number} {navItem.label}</span

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Pagenav from "$lib/components/Pagenav.svelte";
 	import Visitor from "$lib/components/Visitor.svelte";
 	import Sidebar from "$lib/components/Sidebar.svelte";
 	import Navbar from "$lib/components/Navbar.svelte";
@@ -17,11 +16,20 @@
 	</header>
 
 	<main class="space-y-16 text-base leading-relaxed">
-		<section>
-			<p>Working...</p>
-		</section>
+		<section class="scroll-mt-24">
+			<h2 class="mb-6 text-xs font-bold tracking-widest text-gray-400 uppercase">01. Creator</h2>
 
-		<Pagenav previous="solution" next="resources" />
+			<div class="gap-8">
+				<img src="/creator.JPG" alt="Creator of DRIM" class="mb-6 h-32 w-28 object-cover" />
+
+				<div>
+					<h3 class="mb-2 text-xl font-bold">Abinash Sahoo</h3>
+					<p class="font-bold text-gray-500">Creator of DRIM</p>
+				</div>
+
+				<p>Working...</p>
+			</div>
+		</section>
 	</main>
 
 	<Footer />
