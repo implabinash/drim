@@ -1,4 +1,4 @@
-<footer class="mx-auto flex max-w-2xl px-6 pb-20">
+<footer class="mx-auto flex max-w-2xl pt-20">
 	<div
 		class="flex w-full flex-col items-start justify-between gap-8 border-t border-black pt-8 sm:flex-row sm:items-center"
 	>
