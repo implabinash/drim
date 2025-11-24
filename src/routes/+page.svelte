@@ -1,18 +1,9 @@
 <script lang="ts">
-	import type { NavItem } from "$lib/types/navitems";
-
 	import Sidebar from "$lib/components/Sidebar.svelte";
 	import Pagenav from "$lib/components/Pagenav.svelte";
 	import Visitor from "$lib/components/Visitor.svelte";
 	import Footer from "$lib/components/Footer.svelte";
 	import Navbar from "$lib/components/Navbar.svelte";
-
-	const navItems: NavItem[] = [
-		// { id: "problem", label: "The Problem", number: "01" },
-		// { id: "solution", label: "The Solution", number: "02" },
-		// { id: "origin", label: "Origin Story", number: "03" },
-		// { id: "resources", label: "Resources", number: "04" }
-	];
 </script>
 
 <svelte:head>
@@ -21,7 +12,7 @@
 </svelte:head>
 
 <section class="mx-auto max-w-2xl px-6 py-20 text-base sm:text-lg">
-	<Sidebar {navItems} />
+	<Sidebar />
 
 	<Navbar />
 
@@ -31,7 +22,7 @@
 	</header>
 
 	<main class="space-y-16 text-base leading-relaxed">
-		<section id="problem" class="scroll-mt-24">
+		<section class="scroll-mt-24">
 			<h2 class="mb-6 text-xs font-bold tracking-widest text-gray-400 uppercase">
 				01. The Problem
 			</h2>
@@ -48,7 +39,7 @@
 			</p>
 		</section>
 
-		<section id="origin" class="scroll-mt-24">
+		<section class="scroll-mt-24">
 			<h2 class="mb-6 text-xs font-bold tracking-widest text-gray-400 uppercase">
 				02. Origin Story
 			</h2>

@@ -4,7 +4,7 @@
 
 <div class="flex items-center justify-between">
 	{#if previous}
-		<a href="/{previous}">Previous</a>
+		<a href="/{previous === 'home' ? '' : previous}">Previous</a>
 	{/if}
 
 	{#if next}
