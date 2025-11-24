@@ -1,7 +1,5 @@
 <section id="origin" class="scroll-mt-24">
-	<h2 class="mt-16 mb-6 text-xs font-bold tracking-widest text-gray-400 uppercase">
-		02. Origin Story
-	</h2>
+	<h2 class="mb-6 text-xs font-bold tracking-widest text-gray-400 uppercase">02. Origin Story</h2>
 
 	<div class="gap-8">
 		<img src="/creator.JPG" alt="Creator of DRIM" class="mb-6 h-32 w-28 object-cover" />

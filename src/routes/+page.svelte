@@ -4,10 +4,13 @@
 	import Problem from "$lib/components/Problem.svelte";
 	import Sidebar from "$lib/components/Sidebar.svelte";
 	import Origin from "$lib/components/Origin.svelte";
+	import Pagenav from "$lib/components/Pagenav.svelte";
 
 	const navItems: NavItem[] = [
-		{ id: "problem", label: "The Problem", number: "01" },
-		{ id: "origin", label: "Origin Story", number: "02" }
+		// { id: "problem", label: "The Problem", number: "01" },
+		// { id: "solution", label: "The Solution", number: "02" },
+		// { id: "origin", label: "Origin Story", number: "03" },
+		// { id: "resources", label: "Resources", number: "04" }
 	];
 </script>
 
@@ -24,9 +27,11 @@
 		<div class="text-sm font-bold text-gray-500">DevRel Impact Model</div>
 	</header>
 
-	<main class="text-base leading-relaxed">
+	<main class="space-y-16 text-base leading-relaxed">
 		<Problem />
 
 		<Origin />
+
+		<Pagenav next="problem" />
 	</main>
 </section>
