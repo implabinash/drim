@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { resolve } from "$app/paths";
+
 	import Sidebar from "$lib/components/Sidebar.svelte";
 	import Visitor from "$lib/components/Visitor.svelte";
 	import Footer from "$lib/components/Footer.svelte";
@@ -43,28 +45,49 @@
 			<p>
 				DevRel teams work with endless possibilities - blogs, docs, videos, events, workshops,
 				community, tutorials, demos, samples, and more. But choosing what to work on next often
-				feels like a guessing game.
+				feels like a guessing game, and if you are a startup, then good luck starting your DevRel
+				journey without any historical data.
 			</p>
 
 			<p>
-				Most DevRel teams just try different things and see what sticks. That’s expensive,
-				time-consuming, and forces teams into constant experiments, which leads to high costs for
-				the company.
-			</p>
-
-			<p class="font-semibold">
-				We need a way to make smarter decisions before investing time and resources.
+				Most DevRel teams just try different things and see what sticks. Every action, successful or
+				not, costs time, money, and resources. That’s expensive, time-consuming, and forces teams
+				into constant experiments, which leads to high costs for the company.
 			</p>
 
 			<p>
-				DRIM (DevRel Impact Model) is my attempt to solve this. It’s a simple decision-making
-				framework that uses a structured scoring system to give each DevRel input a score from 0 to
-				100, based on core variables like effort, demand, potential impact, and resource cost.
+				The real issue isn’t measurement. It’s the absence of a decision model that helps DevRel
+				teams choose input options wisely before committing effort.
 			</p>
 
 			<p>
-				The goal is not to predict exact outcomes, but to give DevRel teams a decision-making
-				framework to prioritize their work instead of relying on intuition alone.
+				So, we need a simple way to make smarter decisions to evaluate different input options and
+				allocate resources wisely.
+			</p>
+
+			<a href={resolve("/problem")}>Read More</a>
+		</section>
+
+		<section>
+			<h2>02. The Solution</h2>
+
+			<p>
+				DRIM (DevRel Impact Model) is my attempt to solve this. It’s a decision-making framework
+				that uses a simple 0–100 scoring model. Each potential activity, like a blog post, video
+				tutorial, conference, or documentation update, gets evaluated against a set of core
+				variables like effort, demand, potential impact, and resource cost.
+			</p>
+
+			<p>
+				Instead of endless experiments, DRIM helps you compare ideas, rank them, and choose the
+				highest-value option. It works for single decisions (like scoring one blog idea),
+				homogeneous comparisons (like choosing between events), and heterogeneous comparisons (like
+				deciding between writing docs or video tutorials).
+			</p>
+
+			<p>
+				DRIM doesn’t try to predict exact outcomes. It gives teams a structured, evidence-informed
+				way to prioritize their work and allocate DevRel resources with clarity, not guesswork.
 			</p>
 
 			<p>
@@ -72,6 +95,20 @@
 				choosing between two blog ideas, evaluating two events, or comparing different content
 				formats entirely.
 			</p>
+
+			<a href={resolve("/solution")}>Read More</a>
+		</section>
+
+		<section>
+			<h2>03. Origin Story</h2>
+
+			<img src="/creator.JPG" alt="Creator of DRIM" class="mb-6 h-32 w-28 object-cover" />
+
+			<h3 class="mb-2 text-xl font-bold">Abinash Sahoo</h3>
+
+			<p class="font-bold text-gray-500">Creator of DRIM</p>
+
+			<a href={resolve("/origin")}>Read More</a>
 		</section>
 	</main>
 
