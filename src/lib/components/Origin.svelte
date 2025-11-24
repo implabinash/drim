@@ -1,6 +1,6 @@
 <section id="origin" class="scroll-mt-24">
 	<h2 class="mt-16 mb-6 text-xs font-bold tracking-widest text-gray-400 uppercase">
-		05. Origin Story
+		02. Origin Story
 	</h2>
 
 	<div class="gap-8">
