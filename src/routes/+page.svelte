@@ -10,6 +10,27 @@
 <svelte:head>
 	<title>DRIM: DevRel Impact Model</title>
 	<meta name="description" content="A decision making framework for DevRel resource allocation" />
+	<meta
+		name="keywords"
+		content="DRIM, DevRel Impact Model, DevRel, developer relations, DevRel framework, DevRel impact,
+DevRel prioritization, DevRel resource allocation, DevRel decision making, DevRel scoring model"
+	/>
+
+	<meta property="og:title" content="DRIM - DevRel Impact Model" />
+	<meta
+		property="og:description"
+		content="DRIM is a decision-making framework for DevRel resource allocation. It uses a simple 0–100 scoring model that helps DevRel teams decide what to work on."
+	/>
+	<meta property="og:image" content="https://drim.pages.dev/favicon.svg" />
+	<meta property="og:url" content="https://drim.pages.dev/" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="DRIM - DevRel Impact Model" />
+	<meta
+		name="twitter:description"
+		content="DRIM is a decision-making framework for DevRel resource allocation. It uses a simple 0–100 scoring model that helps DevRel teams decide what to work on."
+	/>
+	<meta name="twitter:image" content="https://drim.pages.dev/favicon.svg" />
 </svelte:head>
 
 <section class="mx-auto max-w-2xl px-6 py-20 text-base sm:text-lg">

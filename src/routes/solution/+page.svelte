@@ -3,7 +3,10 @@
 	import Visitor from "$lib/components/Visitor.svelte";
 	import Footer from "$lib/components/Footer.svelte";
 	import Navbar from "$lib/components/Navbar.svelte";
+	import Seo from "$lib/components/Seo.svelte";
 </script>
+
+<Seo title="The Solution" />
 
 <section class="mx-auto max-w-2xl px-6 py-20 text-base sm:text-lg">
 	<Sidebar />
